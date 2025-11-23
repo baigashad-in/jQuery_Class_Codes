@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="JS/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <input type="text" id="txt1" value="First"> <br><br>
+    <input type="text" id="txt2" value="Second"> <br><br>
+
+    <button id="btn">Swap</button>
+    <script>
+        $(document).ready(function()
+        {
+            $("#btn").click(function()
+            {
+                // var x = $("#txt1").val()
+                // var y = $("#txt2").val()
+
+                // $("#txt2").val(x)
+                // $("#txt1").val(y)
+
+
+                var x = $("#txt1").val()
+
+                $("#txt1").val($("#txt2").val())
+                $("#txt2").val(x)
+
+
+            })
+
+            
+
+            
+            
+
+        })
+    </script>
+</body>
+</html>
