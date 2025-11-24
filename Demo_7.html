@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="JS/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <input type="number" id="txt1" placeholder="Enter pincode">
+    <br><br>
+    <button>Check</button>
+    <p></p>
+
+    <script>
+        $(document).ready(function()
+        {
+            $("input").keyup(function()
+            {
+                var a = $("input").val()
+
+                if(a.length == 6)
+                {
+                    $("p").text("Valid pincode !!")
+                    $("p, input").css("color","green")
+                    $("input").css({"border":"3px solid green"})
+                }
+                else if(a.length == 0)
+                {
+                    $("p").text("Please enter a pincode in numeric !!")
+                    $("p, input").css("color","red")
+                    $("input").css({"border":"3px solid red"})
+                }
+                else
+                {
+                    $("p").text("Invalid pincode !!")
+                    $("p, input").css("color","red")
+                    $("input").css({"border":"3px solid red"})
+
+                }
+            })
+        })
+    </script>
+</body>
+</html>
