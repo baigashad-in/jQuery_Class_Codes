@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="JS/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <img src="Images/coding3.jpg" alt="" height="200px">
+    <img src="Images/students.jpg" alt="" height="200px">
+    <img src="Images/star_mountains.png" alt="" height="200px">
+
+    <script>
+        $(document).ready(function()
+        {
+            $("img").click(function()
+            {
+                var x = $(this).attr("src") // img is already selected in above line. on which user clicks.
+                alert(x)
+            })
+
+            
+
+        })
+    </script>
+
+</body>
+</html>
