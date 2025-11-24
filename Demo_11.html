@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="JS/jquery-3.7.1.js"></script>
+
+    <style>
+        .imgBig
+        {
+            height: 350px;
+            border: 5px solid crimson;
+            padding: 5px;
+            box-shadow: 0px 0px 10px 10px black inset;
+        }
+        .imgSmall
+        {
+            height: 150px;
+            border: 2px solid crimson;
+            padding: 2px;
+            box-shadow: 0px 0px 5px 5px black inset;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <img class="imgBig" src="Images/coding.png" alt="" height=" 400px">
+        <br><br>
+        <img class="imgSmall" src="Images/Desert_morning.png" alt="" height=" 200px" width="200px">
+        <img class="imgSmall" src="Images/high_building.jpg" alt="" height=" 200px" width="200px">
+        <img class="imgSmall" src="Images/food.jpg" alt="" height=" 200px" width="200px">
+        <img class="imgSmall" src="Images/map.png" alt="" height=" 200px" width="200px">
+        <img class="imgSmall" src="Images/Snow_mountain2.png" alt="" height=" 200px" width="200px">
+    </center>
+    
+
+    <script>
+        $(document).ready(function()
+        {
+            var BigImage = $(".imgBig").attr("src")
+
+            // $(".imgSmall").click(function()
+            // {
+            //     var smallImage = $(this).attr("src")
+
+            //     $(".imgBig").attr("src", smallImage)
+            // })
+
+            $(".imgSmall").mouseenter(function()
+            {
+                var smallImage = $(this).attr("src")
+                $(this).css("border", "2px solid green")
+
+                $(".imgBig").attr("src", smallImage)
+            })
+            $(".imgSmall").mouseleave(function()
+            {
+                $(".imgBig").attr("src", BigImage)
+                $(this).css("border", "2px solid crimson")
+
+            })
+        })
+    </script>
+
+</body>
+</html>
