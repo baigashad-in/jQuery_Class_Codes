@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="JS/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <select>
+        <option selected value="">-- Select Your Course --</option>
+        <Option value="1">MERN</Option>
+        <Option value="2">ASP.NET MVC</Option>
+        <Option value="3">Java Hibernate</Option>
+        <Option value="4">PHP</Option>
+    </select>
+
+    <br><br>
+
+    <input readonly type="text" placeholder="Amount to pay">
+
+    <script>
+        $(document).ready(function()
+        {
+            $("select").change(function()
+            {   
+                var x = $(this).val()
+                var y = $("input").val()
+                if(x == 1)
+                {
+                    $("input").val("5000")
+                }
+                else if(x == 2)
+                {
+                    $("input").val("6000")
+                }
+                else if(x == 3)
+                {
+                    $("input").val("7000")
+                }
+                else if(x == 4)
+                {
+                    $("input").val("4000")
+                }
+                else
+                {
+                    $("input").val("")
+
+                }
+
+            })
+        })
+    </script>
+</body>
+</html>
