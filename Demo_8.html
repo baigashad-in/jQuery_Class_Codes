@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="JS/jquery-3.7.1.js"></script>
+</head>
+<body>
+    
+    <img id="img1" src="Images/Stars.jpg" alt="" height="300px" width="300px">
+    <img id="img2" src="Images/KoS_Flag.png" alt="" height="300px" width="300px">
+    <br><br>
+    <button>Swap Images</button>
+    <script>
+        $(document).ready(function()
+        {
+            $("button").click(function()
+            {
+                var x = $("#img1").attr("src")
+
+                var y = $("#img2").attr("src")
+
+                $("#img1").attr("src", y)
+                $("#img2").attr("src", x)
+
+            })
+        })
+    </script>
+</body>
+</html>
