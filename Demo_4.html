@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="JS/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <h1 id="x">
+        Techpile Technology
+        <b>This is b Tag</b>
+    </h1>
+    <h1 id="y">Code Helper</h1>
+    <br><br>
+    <button>Double Click Me</button>
+    <script>
+        $(document).ready(function()
+        {
+            $("button").dblclick(function() // double click function of button
+            {
+                // var a = $("#x").text()
+                // var b = $("#y").text()
+
+                // $("#y").text(a)
+                // $("#x").text(b)
+
+                var a = $("#x").html()
+                var b = $("#y").html()
+
+                alert($("#x").html())
+
+                $("#y").html(a)
+                $("#x").html(b)
+
+            })
+            
+        })
+    </script>
+</body>
+</html>
