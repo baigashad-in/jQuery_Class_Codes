@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="JS/jquery-3.7.1.js"></script>
+    <style>
+        div
+        {
+            height: 300px;
+            width: 300px;
+            border: 10px solid crimson;
+        }
+    </style>
+</head>
+<body>
+    <div> Techpile</div>
+    <button>Set style</button>
+    <br>
+    <script>
+        $(document).ready(function()
+        {
+            $("button").click(function()
+            {
+                // $("div").css({"background":"lightblue", "border":"10px solid grey"}) // both lines work
+                $("div").css({background:"lightblue", border:"10px solid grey", color:"white", "text-align":"center", "line-height":"300px"}) // both lines work
+            })
+        })
+    </script>
+</body>
+</html>
