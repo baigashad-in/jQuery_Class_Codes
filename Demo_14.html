@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="JS/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <img id="im1" src="Images/coding.png" alt="" height="100px">
+    <img id="im2" src="Images/coding2.jpg" alt="" height="100px">
+    <img id="im3" src="Images/coding3.jpg" alt="" height="100px">
+    <img id="im4" src="Images/coding4.jpg" alt="" height="100px">
+    <br><br>
+    <button id="btnHide">Hide</button>
+    <button id="btnShow">Show</button>
+    <button id="btnToggle">Toggle</button>
+
+    <script>
+        $(document).ready(function()
+        {
+            $("#btnHide").click(function()
+            {
+                $("#im1").hide("slow")
+                $("#im2").hide("medium")
+                $("#im3").hide("fast")
+                $("#im4").hide(10000)
+            })
+
+            $("#btnShow").click(function()
+            {
+                $("#im1").show("slow")
+                $("#im2").show("medium")
+                $("#im3").show("fast")
+                $("#im4").show(10000)
+            })
+            
+            $("#btnToggle").click(function()
+            {
+                $("#im1").toggle("slow")
+                $("#im2").toggle("medium")
+                $("#im3").toggle("fast")
+                $("#im4").toggle(10000)
+            })
+        })
+    </script>
+    
+</body>
+</html>
