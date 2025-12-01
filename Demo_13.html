@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="JS/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <img src="Images/coding.png" alt="">
+    <br><br>
+    <input type="button" value="Hide">
+
+    <script>
+        $(document).ready(function()
+        {
+            $("input").click(function()
+            {
+                var x = $(this).val()
+
+                if (x == "Hide") 
+                {
+                    $(this).val("Show")
+                    // $("img").css("display", "none")
+                    $("img").css({"opacity":"0", "transition":"2s"})
+                } 
+                else 
+                {
+                    $(this).val("Hide")
+                    // $("img").css("display", "block")
+                    $("img").css("opacity", "1")
+                }
+            })
+        })
+    </script>
+    
+</body>
+</html>
