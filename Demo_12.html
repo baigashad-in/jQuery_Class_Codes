@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="JS/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <input type="checkbox"/> I Agree to Terms and conditions 
+    <!-- <button disabled = "true">Save</button> -->
+    <button disabled>Save</button>
+
+    <script>
+        $(document).ready(function()
+        {
+            $("input").change(function()
+            {
+                var x = $("button").prop("disabled") // true
+                if($(this).prop("checked"))
+                {
+                    $("button").prop("disabled", false) // false
+                }
+                else
+                {
+                    $("button").prop("disabled",true) // true
+                }
+
+            })
+        })
+    </script>
+</body>
+</html>
