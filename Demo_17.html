@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="JS/jquery-3.7.1.js"></script>
+
+    <style>
+        div
+        {
+            width: 1500px;
+            height: 400px;
+            margin: 0px auto;
+        }
+        img
+        {
+            height: 220px;
+            padding: 10px;
+            box-shadow: 0px 0px 10px 2px black inset;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img id="im1" src="Images/food.jpg" alt="">
+        <img id="im2" src="Images/high_building.jpg" alt="">
+        <img id="im3" src="Images/Mountains.png" alt="">
+        <img id="im4" src="Images/tuscuny.png" alt="">
+    </div>
+    
+    
+    <button id="btn1">slideUp</button> <!-- hides -->
+    <button id="btn2">slideDown</button> <!-- displays --> 
+    <button id="btn3">slideToggle</button>  <!-- toggles -->
+    <button id="btn4">fadeIn</button> <!-- opacity from 0 to 1 -->
+    <button id="btn5">fadeOut</button> <!-- opacity from 1 to 0-->
+    <button id="btn6">fadeToggle</button>
+    <button id="btn7">fadeTo</button> <!--opacity to a specified value-->
+
+
+    <script>
+        $(document).ready(function()
+        {
+            $("#btn1").click(function()
+            {
+                $("#im1,#im3").slideUp("fast")
+                $("#im2,#im4").slideUp("slow")
+            })
+            $("#btn2").click(function()
+            {
+                $("#im1,#im3").slideDown("fast")
+                $("#im2,#im4").slideDown("slow")
+            })
+            $("#btn3").click(function()
+            {
+                $("#im1,#im3").slideToggle("fast")
+                $("#im2,#im4").slideToggle("slow")
+            })
+            $("#btn4").click(function()
+            {
+                $("#im1,#im3").fadeOut("fast")
+                $("#im2,#im4").fadeOut("slow")
+            })
+            $("#btn5").click(function()
+            {
+                $("#im1,#im3").fadeIn("fast")
+                $("#im2,#im4").fadeIn("slow")
+            })
+            $("#btn6").click(function()
+            {
+                $("#im1,#im3").fadeToggle("fast")
+                $("#im2,#im4").fadeToggle("slow")
+            })
+            $("#btn7").click(function()
+            {
+                $("#im1,#im3").fadeTo(2000, 0.2)
+                $("#im2,#im4").fadeTo(4000, 0.7)
+            })
+        })
+    </script>
+</body>
+</html>
