@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="JS/jquery-3.7.1.js"></script>
+    <style>
+        .a{
+            transform: rotate(360deg);
+            transition: 1s;
+            border: 10px solid red;
+        }
+        .b{
+            transform: rotate(-360deg);
+            transition: 1s;
+            border: 10px solid green;
+        }
+    </style>
+</head>
+<body>
+    <img src="Images/Snow_mountain2.png" id="im1" height="300px">
+    <img src="Images/tuscuny.png" id="im2" height="300px">
+    <br/>
+    <button id="btn1">AddClass</button>
+    <button id="btn2">RemoveClass</button>
+    <button id="btn3">ToggleClass</button>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("#im1").addClass("a")
+                $("#im2").addClass("b")
+            })
+            $("#btn2").click(function(){
+                $("#im1").removeClass("a")
+                $("#im2").removeClass("b")
+            })
+            $("#btn3").click(function(){
+                $("#im1").toggleClass("a")
+                $("#im2").toggleClass("b")
+            })
+        })
+    </script>
+</body>
+</html>
