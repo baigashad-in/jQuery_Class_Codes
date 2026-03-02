@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="JS/jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="CSS_for_bootstrap/CSS/bootstrap.css">
+</head>
+<body>
+    <table class="table table-bodered">
+        <thead class="table table-warning">
+            <tr><th>Name</th> <th>Salary</th> <th>Company</th></tr>
+
+        </thead>
+        <tbody>
+            <tr><td>Rohan</td> <td>20000</td> <td>TCS</td></tr>
+            <tr><td>Ayansh</td> <td>10000</td> <td>HCL</td></tr>
+            <tr><td>Anshu</td> <td>43000</td> <td>WIPRO</td></tr>
+            <tr><td>Raman</td> <td>27000</td> <td>SigmaIT</td></tr>
+            <tr><td>Jatin</td> <td>35000</td> <td>DigiSure</td></tr>
+        </tbody>
+        
+    </table>
+    <br><br>
+    <button id="btn1">Set Style</button>
+    <button id="btn2">Append</button>
+    <button id="btn3">Prepend</button>
+    <button id="btn4">After</button>
+    <button id="btn5">Before</button>
+    <button id="btn6">Empty</button>
+    <button id="btn7">Remove</button>
+
+    <script>
+        
+        $(document).ready(function()
+        {
+            var res = "<tr><td>Harsh</td> <td>35000</td> <td>DigiSure</td></tr>"
+            $("#btn1").click(function()
+            {
+                $("tr:odd").css({"background": "lightblue", "color":"black"}) // working on CSS only not on Bootstrap.
+                // $("tr:even").css({"background": "crimson", "color":"lightyellow"})
+                // $("tr:first").css({"background": "purple", "color":"lightyellow"})
+                // $("tr:last").css({"background": "green", "color":"white"})
+                // $("tr:eq(2)").css({"background": "green", "color":"white"})
+                // $("tr:eq(4)").css({"background": "crimson", "color":"lightgrey"});
+                // $("tr:lt(3)").css({"background": "crimson", "color":"lightgrey"})
+                // $("tr:gt(2)").css({"background": "grey", "color":"crimson"})
+            })
+            $("#btn2").click(function()
+            {
+                $("tbody").append(res)
+            })
+            $("#btn3").click(function()
+            {
+                $("tbody").prepend(res)
+            })
+            $("#btn4").click(function()
+            {
+                $("tr:last").after(res)
+            })
+            $("#btn5").click(function()
+            {
+                $("tr:eq(1)").before(res)
+            })
+            $("#btn6").click(function()
+            {
+                $("td").empty()
+            })
+            $("#btn7").click(function()
+            {
+                $("table").remove()
+            })
+        })
+    </script>
+
+    <script src="CSS_for_bootstrap/JS/bootstrap.bundle.js"></script>
+</body>
+</html>
