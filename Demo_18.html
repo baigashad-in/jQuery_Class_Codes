@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="JS/jquery-3.7.1.js"></script>
+    <style>
+        div
+        {
+            min-height: 250px;
+            width: 400px;
+            background-color: crimson;
+            margin: 0px auto;
+            padding: 20px;
+            font-size: 20px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <center><h3>Lorem</h3></center>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint molestias repellat reprehenderit distinctio, voluptates adipisci dignissimos totam, dolor quis, facere illo quas! Magnam odio provident, dignissimos dicta quam nam incidunt!
+    </div>
+    <button id="idAppend">Append</button>
+    <button id="idPrepend">Prepend</button>
+    <button id="idAfter">After</button>
+    <button id="idBefore">Before</button>
+    <button id="idEmpty">Empty</button>
+    <button id="idRemove">Remove</button>
+
+    <script>
+        $(document).ready(function()
+        {
+            $("#idAppend").click(function()
+            {
+                $("div").append("<b> This is b tag using append function </b>")
+            })
+            $("#idPrepend").click(function(){
+                $("div").prepend("<b> This is b tag using prepend function </b>")
+            })
+            $("#idAfter").click(function(){
+                $("div").after("<b> This is b tag using after function </b>")
+            })
+            $("#idBefore").click(function(){
+                $("div").before("<b> This is b tag using before function </b>")
+            })
+            $("#idEmpty").click(function(){
+                $("div").empty()
+            })
+            $("#idRemove").click(function(){
+                $("div").remove()
+            })
+        })
+    </script>
+</body>
+</html>
